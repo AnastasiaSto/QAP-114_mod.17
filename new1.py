@@ -1,0 +1,9 @@
+money = float(input("Введите сумму депозита: "))
+print()
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+deposit = [rate * (money / 100) for rate in per_cent.values()]
+print ("Ваш доход в предложенных банках составит: ", deposit)
+print()
+deposit.sort()
+print ("Максимальная сумма, которую Вы можете заработать: ", deposit[len(deposit)-1])
+
